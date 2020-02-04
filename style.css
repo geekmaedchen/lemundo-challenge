@@ -39,6 +39,7 @@ h2 {
   display: flex;
   justify-content: center;
   border-top: 1px solid white;
+  border-bottom: 1px solid #9b9b9b;
   background: #e1e1e1;
   width: 300px;
 }
@@ -94,13 +95,6 @@ span {
   color: #7d7b7b;
   font-size: 0.8em;
   text-align: center;
-}
-.calculate-btn {
-  border: none;
-  border-radius: 3px;
-  background-color: #ddd0ee;
-  margin-left: 10px;
-  color: #7d7b7b;
 }
 
 .amount {

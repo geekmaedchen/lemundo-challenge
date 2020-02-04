@@ -7,7 +7,13 @@ const contents = getAllEl('.content')
 const isActive = localStorage.getItem('active')
 
 tabs.forEach(tab => {
-  tab.classList.contains(isActive) ? tab.classList.add('focused') : ''
+  if (tab.getAttribute('data-js') === isActive) {
+    tab.classList.add('focused')
+  }
+  contents.forEach(content => {
+    content.classList.remove('shown')
+    content.classList.contains(isActive) && content.classList.add('shown')
+  })
 })
 
 tabs.forEach(tab => {
@@ -31,7 +37,6 @@ getPrice()
 
 function getPrice() {
   const input = document.querySelector('.quantity')
-  const button = document.querySelector('.calculate-btn')
   const amount = document.querySelector('.amount')
   const price = 19.95
   const currentPrice = price - price * 0.1
@@ -40,7 +45,7 @@ function getPrice() {
   input.value = '1'
   amount.innerHTML = `${output}  €`
 
-  button.addEventListener('click', () => {
+  input.addEventListener('change', () => {
     const quantity = input.value
     const sum = currentPrice * quantity
     const discountFor = quantity => {
