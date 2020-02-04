@@ -1,42 +1,50 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>Lemundo-Challenge</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
+
   <body>
     <div id="spec">
-      <h2 tabindex="0">General</h2>
-      <dl>
-        <dt>Model</dt>
-        <dd>DC11</dd>
-        <dt>Delivery time</dt>
-        <dd>2-3 weeks</dd>
-      </dl>
-      <h2 tabindex="0">Engine</h2>
-      <dl>
-        <dt>bhp</dt>
-        <dd>404</dd>
-      </dl>
-      <h2 tabindex="0">specials</h2>
-      <span>convertible, leather seats</span>
+      <h1>AUFGABE</h1>
+      <h2>Ein Traum auf vier Rädern...</h2>
+
+      <div class="wrapper">
+        <div class="tabs">
+          <div class="tab" data-js="tab-1">
+            <h3 class="tabtitle" tabindex="0">General</h3>
+          </div>
+          <div class="content tab-1">
+            <dl class="list">
+              <dt>Model</dt>
+              <dd>DC11</dd>
+              <dt>Delivery time</dt>
+              <dd>2-3 weeks</dd>
+            </dl>
+          </div>
+
+          <div class="tab" data-js="tab-2">
+            <h3 class="tabtitle" tabindex="0">Engine</h3>
+          </div>
+          <div class="content  tab-2">
+            <dl class="list">
+              <dt>bhp</dt>
+              <dd>404</dd>
+            </dl>
+          </div>
+
+          <div class="tab" data-js="tab-3">
+            <h3 class="tabtitle" tabindex="0">Specials</h3>
+          </div>
+          <div class="content tab-3">
+            <span>convertible, leather seats</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <script language="JavaScript">
-      SPECDT = [
-        {
-          group: 'General',
-          items: [
-            { name: 'Model', value: 'DC11' },
-            { name: 'Delivery time', value: '2-3 weeks' },
-          ],
-        },
-        {
-          group: 'Engine',
-          items: [{ name: 'bhp', value: '404' }],
-        },
-        {
-          group: 'specials',
-          text: 'convertible, leather seats',
-        },
-      ]
-    </script>
   </body>
+  <script src="main.js"></script>
 </html>
