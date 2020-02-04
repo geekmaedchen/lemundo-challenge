@@ -83,6 +83,31 @@ span {
   margin-left: 15px;
 }
 
+.price {
+  display: flex;
+}
+
+.quantity {
+  width: 50px;
+  height: 2em;
+  margin-left: 5px;
+  color: #7d7b7b;
+  font-size: 0.8em;
+  text-align: center;
+}
+.calculate-btn {
+  border: none;
+  border-radius: 3px;
+  background-color: #ddd0ee;
+  margin-left: 10px;
+  color: #7d7b7b;
+}
+
+.amount {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
   .wrapper {
     box-sizing: content-box;
